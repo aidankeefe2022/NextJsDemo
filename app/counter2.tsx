@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 
-const Counter: React.FC = () => {
+const Counter2: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   const increment = () => setCount((prevCount) => (prevCount+1) >= 10 ? prevCount = 0 : prevCount = prevCount + 1 );
@@ -18,12 +18,12 @@ const Counter: React.FC = () => {
       <button onClick={decrement} style={{ marginRight: '10px', backgroundColor:'lightblue' }}>
         -
       </button>
-      <button onClick={increment} style={{ marginRight: '10px',  backgroundColor:'green' }}>+</button>
 
+      <button onClick={incrementTwo} style={{marginRight: '10px', backgroundColor:'violet' }}>+2</button>
       
       <button onClick={zero}>zero</button>
     </div>
   );
 };
 
-export default Counter;
+export default Counter2;
