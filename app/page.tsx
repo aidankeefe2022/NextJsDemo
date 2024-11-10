@@ -7,8 +7,8 @@ export default function Page() {
     return (
       <div>
           <h1>My name is Aidan</h1>
-          <Counter />
-          <Counter2/>
+          <Counter num={1}/>
+          <Counter num={2}/>
           <Link/>
           <Table/>
       </div>

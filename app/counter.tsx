@@ -4,12 +4,15 @@
 
 import React, { useState } from 'react';
 
-const Counter: React.FC = () => {
+interface Props{
+  num : number;
+}
+
+const Counter: React.FC<Props> = ({num}) => {
   const [count, setCount] = useState<number>(0);
 
-  const increment = () => setCount((prevCount) => (prevCount+1) >= 10 ? prevCount = 0 : prevCount = prevCount + 1 );
-  const incrementTwo = () => setCount((prevCount) => (prevCount+2) >= 10 ? prevCount = 0 : prevCount = prevCount + 2);
-  const decrement = () => setCount((prevCount) => (prevCount-1) >= 10 ? prevCount = 0 : prevCount = prevCount - 1);
+  const increment = () => setCount((prevCount) => (prevCount+1) >= 10 ? prevCount = 0 : prevCount = prevCount + num);
+  const decrement = () => setCount((prevCount) => (prevCount-1) >= 10 ? prevCount = 0 : prevCount = prevCount - num);
   const zero = () => setCount(0)
 
   return (
